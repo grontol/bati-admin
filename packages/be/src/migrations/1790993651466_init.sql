@@ -1,8 +1,3 @@
-
---
--- Table structure for table `session_result`
---
-
 CREATE TABLE `session_result` (
   `id` varchar(36) NOT NULL,
   `name` varchar(512) NOT NULL,
@@ -13,19 +8,9 @@ CREATE TABLE `session_result` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `session_result`
---
-
 INSERT INTO `session_result` (`id`, `name`, `nis`, `date`, `created_at`, `updated_at`, `deleted_at`) VALUES
 ('4a643ca8-38e2-4ee7-b52f-aa483f397d3a', 'Sindoro Bunyu', '123456', '2026-10-03 09:05:18', '2026-10-03 02:05:18', '2026-10-03 02:05:18', NULL),
 ('d44f3d8d-18ba-48f8-8a3a-a9f0a7b9d14a', 'Kongkow', '1236', '2026-10-03 09:06:04', '2026-10-03 02:06:04', '2026-10-03 02:06:04', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `session_result_detail`
---
 
 CREATE TABLE `session_result_detail` (
   `id` varchar(36) NOT NULL,
@@ -44,10 +29,6 @@ CREATE TABLE `session_result_detail` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `session_result_detail`
---
 
 INSERT INTO `session_result_detail` (`id`, `session_result_id`, `scene`, `part`, `is_passed`, `score`, `fluency`, `professionalism`, `intonation`, `content`, `feedback`, `suggested_response`, `created_at`, `updated_at`, `deleted_at`) VALUES
 ('02061146-876e-4016-a441-4dc7fd7660e9', '4a643ca8-38e2-4ee7-b52f-aa483f397d3a', 3, 2, 0, 0, 0, 0, 0, '', '', '', '2026-10-03 02:05:18', '2026-10-03 02:05:18', NULL),
@@ -103,12 +84,6 @@ INSERT INTO `session_result_detail` (`id`, `session_result_id`, `scene`, `part`,
 ('f980b9ef-e610-488d-95d0-6a92db8023f6', '4a643ca8-38e2-4ee7-b52f-aa483f397d3a', 1, 1, 0, 0, 0, 0, 0, '', '', '', '2026-10-03 02:05:18', '2026-10-03 02:05:18', NULL),
 ('fc65ee2a-37bd-4146-9efd-c03d4d3cda5b', 'd44f3d8d-18ba-48f8-8a3a-a9f0a7b9d14a', 1, 6, 0, 0, 0, 0, 0, '', '', '', '2026-10-03 02:06:04', '2026-10-03 02:06:04', NULL);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
 CREATE TABLE `users` (
   `id` varchar(36) NOT NULL,
   `username` varchar(512) NOT NULL,
@@ -120,36 +95,20 @@ CREATE TABLE `users` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `users`
---
-
 INSERT INTO `users` (`id`, `username`, `password`, `name`, `email`, `created_at`, `updated_at`, `deleted_at`) VALUES
 ('3509cf38-bd7a-11f1-ac0e-00e01d0321f5', 'admin', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'The Admin', 'admin@me.com', '2026-10-01 09:26:39', '2026-10-01 09:26:39', NULL);
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `session_result`
---
 ALTER TABLE `session_result`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `session_result_detail`
---
 ALTER TABLE `session_result_detail`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
-COMMIT;
+  
+---###---
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+DROP TABLE users;
+DROP TABLE session_result;
+DROP TABLE session_result_detail;
