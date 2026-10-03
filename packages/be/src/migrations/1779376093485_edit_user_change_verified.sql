@@ -1,7 +1,0 @@
-ALTER TABLE users
-ALTER COLUMN verified SET DEFAULT 1;
-
----###---
-
-ALTER TABLE users
-ALTER COLUMN verified SET DEFAULT 0;
