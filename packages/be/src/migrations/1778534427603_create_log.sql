@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS logs (
+    id VARCHAR(36) NOT NULL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    ref_id VARCHAR(36) NULL,
+    data TEXT NOT NULL,
+    level ENUM('info', 'warning', 'error') NOT NULL,
+    
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+---###---
+
+DROP TABLE IF EXISTS logs;

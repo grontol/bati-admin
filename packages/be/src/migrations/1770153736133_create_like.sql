@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS likes (
+    id VARCHAR(36) NOT NULL PRIMARY KEY,
+    owner_id VARCHAR(36) NOT NULL,
+    user_id VARCHAR(36) NOT NULL
+);
+
+---###---
+
+DROP TABLE IF EXISTS likes;

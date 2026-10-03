@@ -1,0 +1,25 @@
+{
+  "name": "@tahfeedz/tools",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "bun --watch src/main.ts",
+    "devone": "bun src/main.ts",
+    "compress": "bun src/compress.ts",
+    "check": "tsc --noEmit",
+    "build": "tsc && tsc-alias",
+    "test": "bun src/test/runner.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tahfeedz/shared": "^1.0.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.3"
+  }
+}

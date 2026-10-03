@@ -1,0 +1,49 @@
+{
+  "name": "@tahfeedz/fe-admin",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test-compiler": "vitest parser run",
+    "parse": "bun src/transform-test.ts",
+    "deploy": "vite build && rm -rf android/app/src/main/assets/* && cp -r docs/* android/app/src/main/assets/"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.26.5",
+    "@babel/parser": "^7.26.5",
+    "@babel/types": "^7.26.5",
+    "@iconify/json": "^2.2.335",
+    "@iconify/tailwind4": "^1.0.6",
+    "@types/babel-generator": "^6.25.8",
+    "@types/css": "^0.0.38",
+    "@types/node": "^22.10.6",
+    "@types/sortablejs": "^1.15.9",
+    "@types/sql.js": "^1.4.9",
+    "babel-walk": "^3.0.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-checker": "^0.8.0",
+    "vitest": "^2.1.8"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tahfeedz/fe-core": "^1.0.0",
+    "@tahfeedz/shared": "^1.0.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "css": "^3.0.0",
+    "moment": "^2.30.1",
+    "quill": "^2.0.3",
+    "sortablejs": "^1.15.6",
+    "sql.js": "^1.13.0",
+    "tailwind-merge": "^3.2.0",
+    "tailwindcss": "^4.1.4",
+    "uuid": "^12.0.0",
+    "xlsx": "^0.18.5"
+  }
+}

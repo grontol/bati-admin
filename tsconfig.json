@@ -1,0 +1,8 @@
+{
+    "references": [
+        { "path": "./packages/shared" },
+        { "path": "./packages/fe-core" },
+        { "path": "./packages/fe-app" },
+        { "path": "./packages/fe-admin" },
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable",
+            "WebWorker",
+        ],
+        "jsx": "preserve",
+        "jsxFactory": "jsx",
+        "jsxFragmentFactory": "jsxFragment",
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "paths": {
+            "@pang": ["./src/lib/pang/index.ts"],
+            "@pang/*": ["./src/lib/pang/*"],
+            "@tahfeedz/fe-core": ["./src"],
+            "@tahfeedz/fe-core/*": ["./src/*"],
+            "@tahfeedz/shared/*": ["../shared/src/*"],
+            "@tahfeedz/be/*": ["../be/src/*"],
+        },
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "./build",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": true,
+
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "./*.d.ts",
+        "../shared/*.d.ts",
+        "./vite.config.ts",
+        "./src/**/*.ts",
+        "./src/**/*.test.ts",
+        "./src/**/*.tsx",
+        "./src/**/*.test.tsx", "src/utils/color_convert.js",
+    ],
+    "exclude": [
+		"../node_modules/**",
+    ]
+}

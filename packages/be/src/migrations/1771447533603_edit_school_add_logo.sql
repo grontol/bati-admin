@@ -1,0 +1,6 @@
+ALTER TABLE schools
+ADD COLUMN logo VARCHAR(512) NULL AFTER image;
+
+---###---
+ALTER TABLE schools
+DROP COLUMN logo;

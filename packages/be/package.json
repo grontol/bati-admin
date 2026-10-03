@@ -1,0 +1,41 @@
+{
+  "name": "@tahfeedz/be",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "concurrently -n \"TYPE,RUN\" -c \"yellow,green\" \"tsc --noEmit --watch --pretty\" \"bun --watch -r dotenv/config src/main.ts\"",
+    "devone": "bun src/main.ts",
+    "check": "tsc --noEmit",
+    "build": "tsc && tsc-alias",
+    "migration:create": "bun src/db/migration.ts create",
+    "migration:up": "bun src/db/migration.ts up",
+    "migration:down": "bun src/db/migration.ts down",
+    "migration:save": "bun src/db/migration.ts save",
+    "test": "bun src/test/runner.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tahfeedz/shared": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.6.0",
+    "google-auth-library": "^10.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.6.1",
+    "mysql2": "^3.15.3",
+    "uuid": "^13.0.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.10.0",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.9.3"
+  }
+}

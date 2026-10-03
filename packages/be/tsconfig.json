@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "commonjs",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@tahfeedz/shared/*": ["../shared/src/*"],
+        },
+        "outDir": "./build",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "strictFunctionTypes": true,
+        "noImplicitOverride": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "./*.d.ts",
+        "../shared/*.d.ts",
+        "./src/**/*",
+    ],
+}

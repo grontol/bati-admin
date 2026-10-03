@@ -1,0 +1,7 @@
+ALTER TABLE tilawahs
+ADD COLUMN time VARCHAR(255) NOT NULL AFTER date;
+
+---###---
+
+ALTER TABLE tilawahs
+DROP COLUMN time;

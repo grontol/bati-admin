@@ -1,0 +1,28 @@
+{
+    "extends": "../fe-core/tsconfig.json",
+    "compilerOptions": {
+        "paths": {
+            "@pang": ["../fe-core/src/lib/pang/index.ts"],
+            "@pang/*": ["../fe-core/src/lib/pang/*"],
+            "@tahfeedz/fe-core": ["../fe-core/src"],
+            "@tahfeedz/fe-core/*": ["../fe-core/src/*"],
+            "@/*": ["./src/*"],
+            "@tahfeedz/shared/*": ["../shared/src/*"],
+        },
+    },
+    "include": [
+        "./*.d.ts",
+        "../shared/*.d.ts",
+        "./vite.config.ts",
+        "./src/**/*.ts",
+        "./src/**/*.test.ts",
+        "./src/**/*.tsx",
+        "./src/**/*.test.tsx",
+        "../fe-core/src/**/*.ts",
+        "../fe-core/src/**/*.tsx",
+        "../fe-core/*.d.ts",
+    ],
+    "exclude": [
+		"../node_modules/**"
+    ]
+}

@@ -1,0 +1,7 @@
+.vscode/
+build/
+node_modules/
+.env
+public/uploads/
+fcm_service_account.json
+*.dev.sh

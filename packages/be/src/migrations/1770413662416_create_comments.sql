@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS comments (
+    id VARCHAR(36) NOT NULL PRIMARY KEY,
+    owner_id VARCHAR(36) NOT NULL,
+    user_id VARCHAR(36) NOT NULL,
+    reply_comment_id VARCHAR(36) NULL,
+    content TEXT NOT NULL,
+    is_edited TINYINT(1) NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    deleted_at TIMESTAMP NULL
+);
+
+---###---
+
+DROP TABLE IF EXISTS comments;
